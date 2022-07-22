@@ -14,7 +14,8 @@ SELECT first_name, TO_CHAR(salary * 1.20) "увеличенное зп" FROM emp
 SELECT * FROM employees
 WHERE TO_CHAR(hire_date, 'yy')=07 AND TO_CHAR(hire_date, 'mm')=02;
 7)
-
+SELECT FORMAT (getdate(), 'yyyy.MM.dd hh:mm:ss') as date 
+--это уже на ms sql 
 8)
 SELECT first_name, last_name, CONCAT('$', TO_CHAR(salary + salary * commission_pct)) "salary+pct" FROM employees
 WHERE commission_pct > 0;
